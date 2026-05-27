@@ -10,11 +10,11 @@ Este repositório contém minha resolução para o desafio de programação prop
  
 | # | Nome do problema | Link | Dificuldade |
 |---|-----------------|------|-------------|
-| 1 | 1742A A. Sum | [Ver no Codeforces](https://codeforces.com/problemset/problem/1742/A) | 800 |
-| 2 | Nome do Problema | [Ver no Codeforces](https://codeforces.com/...) | 1000 |
-| 3 | Nome do Problema | [Ver no Codeforces](https://codeforces.com/...) | 1200 |
+
+| 1 | 1742A A. Sum         | [Ver no Codeforces](https://codeforces.com/problemset/problem/1742/A) | 800 |
+| 2 | 805B	B. 3-palindrome | [Ver no Codeforces](https://codeforces.com/problemset/problem/805/B)  | 1000 |
+| 3 | Nome do Problema     | [Ver no Codeforces](https://codeforces.com/...)                       | 1200 |
  
-<!-- Remova as linhas dos problemas que não foram resolvidos caso tenha escolhido menos de 3.-->
  
 ---
  
@@ -45,17 +45,26 @@ for _ in range(t):
  
 ---
  
-## Problema 2 — [Nome do Problema]
+## Problema 2 — 805B	B. 3-palindrome
  
 ### O que o problema pede?
- 
+O problema pede para criar uma string com `n` letras usando apenas `a`, `b` e `c`, sem repetir a mesma letra com distância de 2 posições.
+
  
 ### Como eu resolvi?
- 
+ Primeiro procurei entender a lógica do problema e percebi que precisava evitar repetir a mesma letra com distância de 2 posições. Depois disso, criei uma lista vazia e percorri cada posição da string. Em cada passo, testei as letras a, b e c, escolhendo a primeira que não fosse igual à letra de duas posições antes. No final, juntei todas as letras para formar a string.
  
 ### Código
 ```python
-# Cole seu código aqui
+n = int(input())
+s = []
+
+for i in range(n):
+    for letra in "abc":
+        if i < 2 or s[i-2] != letra:
+            s.append(letra)
+            break
+print("".join(s))
 ```
  
 ---
