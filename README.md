@@ -10,7 +10,7 @@ Este repositório contém minha resolução para o desafio de programação prop
  
 | # | Nome do problema | Link | Dificuldade |
 |---|-----------------|------|-------------|
-| 1 | Nome do Problema | [Ver no Codeforces](https://codeforces.com/...) | 800 |
+| 1 | 1742A A. Sum | [Ver no Codeforces](https://codeforces.com/problemset/problem/1742/A) | 800 |
 | 2 | Nome do Problema | [Ver no Codeforces](https://codeforces.com/...) | 1000 |
 | 3 | Nome do Problema | [Ver no Codeforces](https://codeforces.com/...) | 1200 |
  
@@ -18,19 +18,29 @@ Este repositório contém minha resolução para o desafio de programação prop
  
 ---
  
-## Problema 1 — [Nome do Problema]
+## Problema 1 — A. Sum
  
 ### O que o problema pede?
-<!-- Explique com suas próprias palavras o que o problema pede. Não copie o enunciado. -->
+O problema solicita primeiro que seja informado um número de testes. Para cada teste, devem ser recebidos três números inteiros. Em seguida, é necessário verificar se um desses números é igual à soma dos outros dois. Se essa condição for verdadeira, deve ser impresso “SIM”; caso contrário, “NÃO”.
  
  
 ### Como eu resolvi?
-<!-- Descreva a estratégia que você usou. Por exemplo: ordenei a lista, filtrei os negativos, etc. -->
+Optei por usar Python por ser uma linguagem mais simples e com menor quantidade de código para resolver o problema.
+
+Primeiro, busquei entender bem a lógica do exercício e utilizei o ChatGPT como apoio durante o processo, além de seguir orientações do vídeo do professor Fábio.
+
+A principal dificuldade foi executar o código corretamente no VSCode, já que tive alguns problemas com o ambiente. Após tirar dúvidas com a IA, consegui ajustar a execução e rodar o programa sem erros.
+
+No final, compreendi a lógica do problema e utilizei a estrutura de repetição for para resolver cada caso de teste de forma correta e organizada.
  
  
 ### Código
 ```python
-# Cole seu código aqui
+t = int(input())
+
+for _ in range(t):
+    a, b, c = sorted(map(int, input().split()))
+    print("YES" if a + b == c else "NO")
 ```
  
 ---
@@ -70,22 +80,36 @@ Este repositório contém minha resolução para o desafio de programação prop
 ## IA utilizada
  
 **Qual IA você usou?**
-<!-- Ex: Claude, ChatGPT, Gemini... -->
+ChatGPT
  
 **Como a IA te ajudou?**
-<!-- Descreva como você usou a IA no processo. Ela explicou o problema? Sugeriu uma estratégia? Ajudou a corrigir um erro? -->
- 
+A IA me ajudou a entender o problema, explicou a estratégia correta para resolvê-lo e identificou o erro na minha lógica inicial. Além disso, corrigiu o código, mostrou como executá-lo corretamente no ambiente Python e apresentou versões mais eficientes da solução, contribuindo também para meu aprendizado e evolução na forma de pensar problemas de programação.
+
 ---
  
 ## Reflexão
  
 ### Dificuldades encontradas
-<!-- O que foi mais difícil? Entender o problema? Escrever o código? Usar o GitHub? -->
+O mais difícil pra mim foi organizar tudo sem me perder no caminho.
+
+Entender o problema foi o primeiro desafio, porque precisei transformar o enunciado em lógica. Depois que isso ficou claro, escrever o código ficou bem mais tranquilo. O GitHub acabou sendo mais uma questão de configuração e comandos, algo mais técnico.
+
+No fim, o maior desafio não foi uma parte específica, mas conseguir juntar entendimento, lógica e ferramentas sem me confundir no processo.
  
  
 ### O que aprendi
-<!-- O que você aprendeu de novo com este desafio? Pode ser sobre programação, sobre usar IA, ou qualquer coisa. -->
+Aprendi a transformar melhor o problema em lógica antes de sair escrevendo código. Percebi que quando eu entendo direito o enunciado, o código flui muito mais fácil e evito erro bobo.
+
+Também aprendi a usar melhor o ambiente de execução, principalmente a diferença entre rodar Python e comandos do terminal, o que antes me confundia bastante.
+
+E sobre IA, ficou claro pra mim que ela ajuda muito mais quando eu já tento pensar primeiro — ela não só “resolve”, mas também explica, corrige e me faz enxergar outras formas mais eficientes de fazer a mesma coisa.
+
  
  
 ### Como foi a experiência?
-<!-- Conta um pouco como foi no geral. O que mais gostou? O que mudaria? -->
+No geral, foi uma experiência bem interessante porque me fez pensar mais em lógica e não só em “fazer o código funcionar”.
+
+O que eu mais gostei foi quando a solução começou a fazer sentido de verdade, depois que entendi o problema. A partir daí, ficou mais fácil ajustar o código e ver que existem formas mais simples de resolver a mesma coisa.
+
+O que eu mudaria é ter perdido menos tempo com erros básicos de ambiente e já começar com uma estrutura mais organizada desde o início. Isso teria deixado o processo mais fluido e menos confuso.
+
