@@ -11,9 +11,9 @@ Este repositório contém minha resolução para o desafio de programação prop
 | # | Nome do problema | Link | Dificuldade |
 |---|-----------------|------|-------------|
 
-| 1 | 1742A A. Sum         | [Ver no Codeforces](https://codeforces.com/problemset/problem/1742/A) | 800 |
-| 2 | 805B	B. 3-palindrome | [Ver no Codeforces](https://codeforces.com/problemset/problem/805/B)  | 1000 |
-| 3 | Nome do Problema     | [Ver no Codeforces](https://codeforces.com/...)                       | 1200 |
+| 1 | 1742A A. Sum          | [Ver no Codeforces](https://codeforces.com/problemset/problem/1742/A) |  800 |
+| 2 | 805B	B. 3-palindrome  | [Ver no Codeforces](https://codeforces.com/problemset/problem/805/B)  | 1000 |
+| 3 | 466A A. Cheap Travel  | [Ver no Codeforces](https://codeforces.com/problemset/problem/466/A)  | 1200 |
  
  
 ---
@@ -69,17 +69,31 @@ print("".join(s))
  
 ---
  
-## Problema 3 — [Nome do Problema]
+## Problema 3 — A. Cheap Travel
  
 ### O que o problema pede?
- 
+
+O problema pede para descobrir a forma mais barata de fazer `n` viagens de metrô. Para isso, você pode pagar viagem por viagem ou usar um ticket que cobre várias viagens de uma vez. A ideia é escolher a opção que gasta menos dinheiro no final.
+
  
 ### Como eu resolvi?
- 
+
+Primeiro, entendi que precisava comparar formas diferentes de pagar as viagens. Depois, calculei o custo usando três estratégias: pagar todas as viagens individualmente, usar tickets de `m` viagens o máximo possível e completar o resto com tickets individuais, e também usar apenas tickets de `m` viagens. No final, escolhi o menor valor entre essas opções para encontrar a forma mais barata.
+
  
 ### Código
 ```python
-# Cole seu código aqui
+n, m, a, b = map(int, input().split())
+
+custo1 = n * a
+
+pacotes = n // m
+resto = n % m
+custo2 = pacotes * b + resto * a
+
+custo3 = ((n + m - 1) // m) * b
+
+print(min(custo1, custo2, custo3))
 ```
  
 <!-- Remova as linhas dos problemas que não foram resolvidos caso tenha escolhido menos de 3.-->
